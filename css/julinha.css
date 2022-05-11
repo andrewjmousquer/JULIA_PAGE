@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans:wght@300;400&family=Oswald:wght@200;300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'amatic sc', sans-serif;
+}
+
+.social-media {
+    margin-top: 50px;
+    display: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    padding: 1rem 4rem;
+    border: 1px solid black;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.55, 0.025, 0.675, 0.97);   
+    border-radius: 30px;
+}
+
+a:hover {
+    color: #2E1C2b;
+    background-color: gray;
+}
+
+.social-media {
+    height: 100vh;
+    width: 100%;
+    animation: backgroundTransition 8s ease-in-out infinite;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
+    
+}

@@ -47,7 +47,8 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);   
+    transition: 0.5s cubic-bezier(0.55, 0.025, 0.675, 0.97);  
+    border-radius: 30px; 
 }
 
 a:hover {
@@ -56,7 +57,7 @@ a:hover {
 }
 
 @keyframes backgroundTransition {
-    0%{
+    0% {
         background-position: 0% 80%;
     }
     50% {
@@ -145,7 +146,7 @@ a:hover {
 }
 
 .menu-itens ul {
-    list-style-type: none;
+    list-style-type:none;
 }
 
 .menu-itens ul li a {
@@ -179,11 +180,11 @@ a:hover {
 }
 
 #toggle:checked + .checkbox {
-    background-color: #ddc8ed;;
+    background-color: white;
 }
 
 #toggle:checked ~ .menu {
-    box-shadow: 0px 0px 0px 100vmax #ddc8ed;
+    box-shadow: 0px 0px 0px 100vmax white;
     z-index: 1;
 }
 
@@ -215,7 +216,7 @@ a:hover {
     height: 300px;
     width: 400px;
     margin: 3rem 0 0;
-    background-image: url(./room.jpg);
+    background-image: url(/imagens/julia.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,7 +230,8 @@ a:hover {
 }
 
 .card-text {
-    width: 40px;
+    font-size: 70px;
+    width: 40%;
     font-family: sans-serif;
     letter-spacing: 1px;
     color: rgb(109, 109, 109);
@@ -272,3 +274,58 @@ a:hover {
     width: 350px;
     height: 250px;
 }
+
+.card:hover > .card-wrapper p {
+    font-size: 14px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*FOOTER */
+
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2E1C2B;
+}
+
+/*RESPONSIVO*/
+
+@media (max-width: 800px) {
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin-top: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .container .card-container:nth-child(1),
+    .container .card-container:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .card {
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text {
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before {
+        height: 190px;
+        width: 190px;
+    }
+}
+        
